@@ -31,7 +31,11 @@ class Single_Inverted_Swing_Up(Node):
             self.handle_state_msg,
             10
         )
-        self.torque_publisher = self.create_publisher(TorqueInput, "/Torque_msg", 10)
+        self.torque_publisher = self.create_publisher(
+            TorqueInput,
+            "/torque_input",
+            10
+        )
 
         self.prev_time = time.time()
 
